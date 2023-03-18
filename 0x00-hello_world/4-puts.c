@@ -1,14 +1,10 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
- *
- * Description: Prints "Programming is like building a multilingual puzzle"
- * with a double quote in the beginning.
- * Return: Always 0 (Success)
+ *main - main entry point
+ *return : always 0 (success)
  */
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle\n);
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
