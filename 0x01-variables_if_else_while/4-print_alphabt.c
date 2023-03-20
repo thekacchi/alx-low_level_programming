@@ -10,9 +10,8 @@ int main(void)
 
 	for (c = 'a' ; c <= 'z' ; c++)
 	{	
-		if (c == 101 || c == 113)
+		if (c == 'e' || c == 'q')
 		{
-			c++;
 			continue;
 		}
 		putchar(c);
