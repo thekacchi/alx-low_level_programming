@@ -1,7 +1,6 @@
 #include <stdio.h>
 /** Printing base 10 digits */
-
-main()
+int main(void)
 {
 	int i;
 
