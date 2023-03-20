@@ -1,5 +1,9 @@
 #include <stdio.h>
-/** Printing base 10 digits */
+/**
+  *main - Entry point
+  *Description - Printing base 10 digits
+  *Return: always 0
+  */
 int main(void)
 {
 	int i;
