@@ -3,10 +3,10 @@
 #include <time.h>
 
 /**
-  *main -entry point
-  *return: Always 0
+  *main - entry point
+  *Description - prints a combination of numbers
+  *Return: always 0
   */
-
 int main(void)
 {
 	int a, b;
