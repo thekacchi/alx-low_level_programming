@@ -1,17 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - prints the alphabe
  * description - prints alphabetsp
  * Return: Always 0.
  */
-int main(void)
+
+void print_alphabet(void)
 {
 	char a;
 
 	for (a = 'a' ; a <= 'z' ; a++)
 	{
-		putchar(a);
+		_putchar(a);
 	}
-	putchar('\n');
-	return (0);
+	_putchar('\n');
 }
