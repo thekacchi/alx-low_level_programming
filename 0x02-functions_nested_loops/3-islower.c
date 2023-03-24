@@ -2,6 +2,7 @@
 
 /**
  * _islower - funtion identifies lower case
+ * @c: parameter to be printed
  * Description - identifies characters
  * Return: 1 is lowercase and 0 otherwise
  */
