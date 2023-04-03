@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
-  *_mencpy - main function
+  *_memcpy - main function entry point
+  *_memcpy - copies from memory area to memory area
   *@dest: parameter to be operated
   *@src: parameter to be operated on
   *@n: parameter to be operated
+  *Return: always 0
   */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
