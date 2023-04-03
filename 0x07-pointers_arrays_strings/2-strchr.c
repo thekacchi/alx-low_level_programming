@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-  *_strch - maion entry point
+ *_strchr - maion entry point
   *@s: parameter to be operated
   *@c: parameter to be operated
   *Return: always 0
