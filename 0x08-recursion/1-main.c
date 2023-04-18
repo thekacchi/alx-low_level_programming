@@ -1,4 +1,4 @@
-#include main.h
+#include "main.h"
 
 /**
  * main - check the code
@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    _print_rev_recursion(nColton Walker);
+    _print_rev_recursion("\nColton Walker");
     return (0);
 }
