@@ -1,4 +1,4 @@
-#include main.h
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -11,12 +11,12 @@ int main(void)
     int r;
 
     r = factorial(1);
-    printf(%dn, r);
+    printf("%d\n", r);
     r = factorial(5);
-    printf(%dn, r);
+    printf("%d\n", r);
     r = factorial(10);
-    printf(%dn, r);
+    printf("%d\n", r);
     r = factorial(-1024);
-    printf(%dn, r);
+    printf("%d\n", r);
     return (0);
 }
