@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <string.h> 
+#include <string.h>
 
 /**
-  *int _strlen_recursion - main entry point
+  *_strlen_recursion - main entry point
   *@s: parameter to be operated
-  *return: always 0
+  *Return: returns lenght of a string
   */
 
 int _strlen_recursion(char *s)
