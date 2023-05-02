@@ -12,26 +12,23 @@ int main(int argc, char *argv[])
 {
 	int mul;
 	int args = argc - 1;
-	int a = atoi(argv[1]);
-	int b = atoi(argv[2]);
+
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
 
 	if (args == 2)
 	{
+		int a = atoi(argv[1]);
+		int b = atoi(argv[2]);
+
 		mul = a * b;
 			printf("%d\n", mul);
 			return (0);
 	}
 
-	if (args != 2)
-	{
-		printf("Error\n");
-		return (1);
-	}
 
-	if (argc == 1)
-	{
-		printf("Error\n");
-		return (1);
-	}
 	return (0);
 }
