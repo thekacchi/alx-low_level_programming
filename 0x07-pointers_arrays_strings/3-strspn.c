@@ -6,8 +6,8 @@
   *@accept: parameter to be operated
   *Return: always 0
   */
-unsigned int _strspn(char *s, char *accept);
+unsigned int _strspn(char *s, char *accept)
 {
-	s = &accept
+	s = &accept;
 	return (0);
 }
