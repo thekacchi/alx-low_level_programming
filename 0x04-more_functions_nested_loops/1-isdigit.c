@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- * isdigit - chceks whether c is a digit
+ * _isdigit - chceks whether c is a digit
  * @c: parameter to be chceked
- * return: 1 is c is a digit and 0 if its not
+ * Return: 1 is c is a digit and 0 if its not
  */
 
 int _isdigit(int c)
@@ -13,5 +13,9 @@ int _isdigit(int c)
 	{
 		return (1);
 	}
-	return (0);
+
+	else
+	{
+		return (0);
+	}
 }
