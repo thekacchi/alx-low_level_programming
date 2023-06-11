@@ -1,41 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "main.h"
 
-int is_digit(char x)
-{
-	return (x >= '0' && x <= '9');
-}
-
-int add_positive(int argc, char *argv[])
-{
-	int res = 0;
-	int i, j;
-
-	for (i = 1; i < argc; i++)
-	{
-		for (j = 0; argv [i][j] != '0'; j++)
-		{
-			if (!is_digit(argv[i][j]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-		res += atoi(argv[i]);
-	}
-	printf("%d\n", res);
-	return (0);
-}
+/**
+ * main - adds numbers
+ * @argc: arg count
+ * @argv: arg vextor
+ * Return: Varies
+ */
 
 int main(int argc, char *argv[])
 {
+	int i;
+
+	unsigned int k, sum = 0;
+	char *e;
+
 	if (argc > 1)
 	{
-		return(add_positive(argc, argv));
-	}
-		else
+		for (i = 1; i < argc; i++)
 		{
-		printf("0\n");
-		return (0);
+			e = argv[i];
+
+			for (k = 0; k < strlen(e); k++)
+			{
+				if (e[k] < 48 || e[k] > 57)
+				{
+				printf("Error\n");
+				return (1);
+				}
+			}
+			sum += atoi(e);
+			e++;
 		}
+
+		printf("%d\n", sum);
+	}
+	else
+	{
+	printf("%d\n", sum);
+	}
+
+	return (0);
 }
+

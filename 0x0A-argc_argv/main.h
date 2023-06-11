@@ -1,6 +1,7 @@
 #ifndef MAIN_h
 #define MAIN_h
 
+int main(int argc, char *argv[]);
 int _putchar(char c);
 char *_memset(char *s, char b, unsigned int n);
 char *_memcpy(char *dest, char *src, unsigned int n);
