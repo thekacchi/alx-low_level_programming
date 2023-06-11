@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - entry point
+ * @argc: arguement count
+ * @argv: arguement vector
+ * Return: always 0
+ */
+
+int main(int argc, char *argv[])
+{
+	if (argc = 1)
+	{
+		printf("0\n");
+	}
+
+	else if 
+	else
+	{
+		for (i = 0; i < argc; i++)
+		{
+			sum += atoi(argv[i]);
+		}
+		printf("%d", sum);
+	}
+}
