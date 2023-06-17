@@ -1,7 +1,7 @@
 #ifndef MAIN_h
 #define MAIN_h
 
-int _putchar(char c;
+int _putchar(char c);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int *array_range(int min, int max);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
