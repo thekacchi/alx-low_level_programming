@@ -2,8 +2,10 @@
 #include "dog.h"
 
 /**
- *
- *
+ *print_dog - prints dog profile
+ *Description - prints dog profile
+ *@d: function parameter
+ *Return: Nothing if d is null
  */
 
 void print_dog(struct dog *d)
