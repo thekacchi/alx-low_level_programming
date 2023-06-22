@@ -15,7 +15,7 @@ int op_add(int a, int b)
 }
 
 /**
- * op_subtract - func sub
+ * op_sub - func sub
  * @a: para
  * @b: oara
  * Return: always 0
@@ -45,7 +45,7 @@ int op_mul(int a, int b)
  * Return: always 0
  */
 
-int op_div(int a,int b)
+int op_div(int a, int b)
 {
 	if (b == 0)
 	{

@@ -5,7 +5,7 @@
 /**
  * get_op_func - who knows
  * @s: parap
- * Retrun: who knows
+ * Return: who knows
  */
 
 int (*get_op_func(char *s))(int, int)
