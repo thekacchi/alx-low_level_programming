@@ -1,8 +1,8 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include <stdlib.h>
 
-/*
- * main - prints the opcodes
+/**
+ * main - main entry point
  * @argc: arguement count
  * @argv: argument vector
  * Return: always 0
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		opcode = *(unsigned char *)address;
 		printf("%.2x", opcode);
 
-		if (index == bytes -1)
+		if (index == bytes - 1)
 			continue;
 		printf(" ");
 
