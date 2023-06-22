@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
-* main -
-* @argc:
-* @argv:
+* main - main entry point
+* @argc: parametr
+* @argv: parameter
 *
 * Return: ..
 */
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 
 	oprt = get_op_func(argv[2]);
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	if (!oprt)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 
 	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
