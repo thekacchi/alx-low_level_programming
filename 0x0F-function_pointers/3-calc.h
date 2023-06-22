@@ -5,8 +5,7 @@
  * struct op - Struct op
  * @op: func operator
  * @f: associated function
- * */
-
+ */
 typedef struct op
 {
 	char *op;
