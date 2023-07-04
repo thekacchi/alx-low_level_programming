@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * print_list - prints items in a list
@@ -12,22 +11,15 @@ size_t print_list(const list_t *h)
 {
 	size_t count = 0;
 
-	if (h == NULL)
+	while (h)
 	{
-		return (count);
-	}
-
-	else
-	{
-		while (h != NULL)
-	{
-		if (h->str == NULL)
+		if (!h->str)
 		{
 		printf("[0] (nil)\n");
 		}
 		else
 		{
-			printf("[%lu] %s\n", count, h->str);
+			printf("[%u] %s\n", h->len, h->str);
 		}
 
 		count++;
@@ -35,5 +27,4 @@ size_t print_list(const list_t *h)
 	}
 
 	return (count);
-	}
 }
