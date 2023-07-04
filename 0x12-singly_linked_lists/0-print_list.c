@@ -12,6 +12,12 @@
 size_t print_list(const list_t *h)
 {
 	size_t count = 0;
+	
+	if (h == NULL)
+	{
+		printf("Empty list");
+		return count;
+	}
 
 	while (h != NULL)
 	{
@@ -29,4 +35,5 @@ size_t print_list(const list_t *h)
 	}
 
 	return (count);
+	
 }
