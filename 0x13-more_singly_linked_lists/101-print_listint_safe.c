@@ -42,6 +42,10 @@ size_t looped_listint_len(const listint_t *head)
 	}
 
 	return (0);
+	
+	/**if (tortoise == hare)
+		exit(98);
+		*/
 }
 
 /**
@@ -75,8 +79,11 @@ size_t print_listint_safe(const listint_t *head)
 		printf("-> [%p] %d\n", (void *)head, head->n);
 	}
 
-	if (nodes == 0 || index == nodes)
+	return (nodes);
+
+	/**if (nodes == 0 || index == nodes)
 		return (nodes);
 
 	exit(98);
+	*/
 }
