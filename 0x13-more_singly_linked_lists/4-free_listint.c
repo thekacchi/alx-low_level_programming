@@ -3,9 +3,10 @@
 #include <stdlib.h>
 
 /**
- * free_list - frees a listsint_t list
+ * free_listint - frees a listsint_t list
  * @head: points to head of the list
- * Description: starts from the head ant iterates to free memory allocated
+ *
+ * Desc: starts from the head ant iterates to free memory allocated
  * to each node till it reaches end of the list
  */
 
