@@ -1,42 +1,26 @@
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdlib.h>
-#include <stdio.h>
-
-ssize_t read_textfile(const char *filename, size_t letters) {
-    int fd;
-    ssize_t bytes_read, bytes_written;
-    char *buffer;
-
-    if (filename == NULL)
-        return 0;
-
-    buffer = malloc(sizeof(char) * (letters + 1));
-    if (buffer == NULL)
-        return 0;
-
-    fd = open(filename, O_RDONLY);
-    if (fd == -1) {
-        free(buffer);
-        return 0;
-    }
-
-    bytes_read = read(fd, buffer, letters);
-    if (bytes_read == -1) {
-        free(buffer);
+#include "main.h"
+/**
+ * create_file - Creates a file.
+ * @filename: A pointer to the name of the file to create.
+ * @text_content: A pointer to a string to write to the file.
+ *
+ * Return: If the function fails - -1.
+ *         Otherwise - 1.
+ */
+int create_file(const char *filename, char *text_content)
+{
+        int fd, w, len = 0;
+        if (filename == NULL)
+                return (-1);
+        if (text_content != NULL)
+        {
+                for (len = 0; text_content[len];)
+                        len++;
+        }
+        fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+        w = write(fd, text_content, len);
+        if (fd == -1 || w == -1)
+                return (-1);
         close(fd);
-        return 0;
-    }
-
-    bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
-    if (bytes_written == -1 || bytes_written != bytes_read) {
-        free(buffer);
-        close(fd);
-        return 0;
-    }
-
-    free(buffer);
-    close(fd);
-    return bytes_written;
+        return (1);
 }
-
