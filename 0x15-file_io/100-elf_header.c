@@ -63,7 +63,7 @@ void print_magic(unsigned char *e_ident)
 /**
  * print_class - prints the class of and ELF header
  * @e_ident: pointer to arraycontaining ELD magic numbess
- * Descriptions: same as 
+ * Descriptions: same as
  */
 void print_class(unsigned char *e_ident)
 {
@@ -194,7 +194,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
 
-	printf( "Type: ");
+	printf("Type: ");
 
 	switch (e_type)
 	{
@@ -257,11 +257,11 @@ void close_elf(int elf)
 }
 
 /**
- * main - displays information contained in the 
+ * main - displays information contained in the
  * ELF header at the satrts of ELF file
  * @argc: number of arguements supplied to program
  * @argv: array of pointers to the arguements
- * Description: if the file is not an ELF, functio fails 
+ * Description: if the file is not an ELF, functio fails
  * with exit code 98
  * Return : 0 is succesfulf
  */
@@ -294,11 +294,10 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	}
 
 	check_elf(header->e_ident);
-        printf("ELF Header:\n");
-        print_magic(header->e_ident);
-        print_class(header->e_ident);
-        print_data(header->e_ident);
-
+	printf("ELF Header:\n");
+	print_magic(header->e_ident);
+	print_class(header->e_ident);
+	print_data(header->e_ident);
 
 	free(header);
 	close_elf(o);
