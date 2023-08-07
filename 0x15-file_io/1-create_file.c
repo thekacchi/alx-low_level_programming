@@ -4,6 +4,7 @@
  * create_file - creates a file
  * @filename: pointer to the name of the file to be creatwd
  * @text_content: pointer to string to wrire the file
+ * Return: -1 if function fails. 1 if successful
  */
 int create_file(const char *filename, char *text_content)
 {
