@@ -88,8 +88,7 @@ void print_class(unsigned char *e_ident)
 void print_data(unsigned char *e_ident)
 {
 	printf(" Data: ");
-	
-	switch(e_ident[EI_DATA])
+	switch (e_ident[EI_DATA])
 	{
 	case ELFDATANONE:
 		printf("none\n");
@@ -107,7 +106,7 @@ void print_data(unsigned char *e_ident)
 
 /**
  * print_version - Prints thw veraion an an ELF header
- * e_ident: a pointer to an areay containing the ELF version
+ * @e_ident: a pointer to an areay containing the ELF version
  */
 void print_version(unsigned char *e_ident)
 {
@@ -234,8 +233,8 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 }
 
 /**
- * close_wld - Closes an ELF file
- * @eld: The file descriptor of the ELF file
+ * close_elf - Closes an ELF file
+ * @elf: The file descriptor of the ELF file
  *
  * Description: If the file cannot be closed - exit code 98
  */
@@ -243,13 +242,13 @@ void close_elf(int elf)
 {
 	if (close(elf) == -1)
 	{
-		dprintf(STDERR_FILENO,"ERROR: Can't close fd %d\n", elf);
+		dprintf(STDERR_FILENO, "ERROR: Can't close fd %d\n", elf);
 		exit(98);
 	}
 }
 
 /**
- * main - Displays information contained in the 
+ * main - Displays information contained in the
  * ELF header at the start of ELF file
  * @argc: The number of arguemnets supplied to the program
  * @argv: An areay of pointers to the arguemnets
@@ -299,5 +298,5 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	
 	free(header);
 	close_elf(o);
-	return(0);
+	return (0);
 }
