@@ -23,7 +23,7 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_buffer - closes file descriptors
+ * close_file - closes file descriptors
  * @fd: The filedesc to be closed
  */
 void close_file(int fd)
@@ -41,7 +41,7 @@ void close_file(int fd)
 
 /**
  * main - copies rhe content of one file to another
- * @argv: number of arguements supplied to the program
+ * @argc: arguement count
  * @argv: array fo pointers to the arguements
  *
  * Return: 0 on success
