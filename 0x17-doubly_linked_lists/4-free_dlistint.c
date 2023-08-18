@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_dlistint Frees a dlistint_t list
+ * free_dlistint - Frees a dlistint_t list
  * @head: Pointer to the doubly linked list
  */
 void free_dlistint(dlistint_t *head)
