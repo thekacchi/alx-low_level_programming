@@ -1,29 +1,30 @@
 # Variables
 CC = gcc
 SRC = main.c school.c
-OBJ = $(SRC:.c=.o)
+OBI = $(SRC:.c=.o)
 NAME = school
-RM = rm -f
+BM = rm -f
 AFLAGS = -Wall -Werror -Wextra -pedantic
+AB = gcc
 
 # Default Target
 all: $(NAME)
 
 # Rule to build the executable
-$(NAME): $(OBJ)
-	$(CC) -o $@ $(OBJ) $(AFLAGS)
+$(NAME): $(OBI)
+	$(BM) -o $@ $(OBI) $(AFLAGS)
 
 # Rule to build .o files from .c files
 .c.o:
-	$(CC) -c $< -o $@ $(AFLAGS)
+	$(AB) -c $< -o $@ $(AFLAGS)
 
 # Clean rule
 clean:
-	@-$(RM) *~ $(NAME)
+	@-$(BM) *~ $(NAME)
 
 # Object files clean rule
 oclean:
-	@-$(RM) $(OBJ)
+	@-$(BM) $(OBI)
 
 # Full clean rule
 fclean: clean oclean
@@ -35,7 +36,7 @@ re: fclean all
 .PHONY: all clean oclean fclean re
 
 # Don't compile if m.h is missing
-$(OBJ): m.h
+$(OBI): m.h
 
 # $(RM) usage
 RM = rm -f
