@@ -3,7 +3,7 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
-RM = -f
+RM = rm -f
 
 # Default Target
 all: $(NAME)
