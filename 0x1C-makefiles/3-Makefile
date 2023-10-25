@@ -26,10 +26,10 @@ oclean:
 
 # Full clean rule
 fclean: clean oclean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 # Force recompilation of all source files
 re: fclean all
 
 # Ensure that these rules never fail, even if files are absent
-.PHONY : all clean oclean fclean re
+.PHONY: all clean oclean fclean re
