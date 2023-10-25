@@ -18,7 +18,7 @@ $(NAME): $(OBJ)
 
 # Clean rule
 clean:
-	@$(RM) *~ *# $(OBJ)
+	@$(RM) *~ $(NAME)
 
 # Object files clean rule
 oclean:
