@@ -1,0 +1,14 @@
+# Variables
+CC = gcc
+SRC = main.c school.c
+
+# Executable
+school: $(SRC)
+	$(CC) $(SRC) -o school
+
+# Default rule
+all: school
+
+# Clean rule
+clean:
+	rm -f school
