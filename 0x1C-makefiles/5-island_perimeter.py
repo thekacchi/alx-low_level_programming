@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """This module contains a function definition"""
 
+
 def island_perimeter(grid):
     """
     This function returns the perimeter of an island described in the grid
-    
+
     Args:
     grid (List[List[int]]): A list of lists representing the island grid
 
