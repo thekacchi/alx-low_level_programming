@@ -1,0 +1,16 @@
+# Variables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+# Default target
+all: $(NAME)
+
+# Rule to build the executable
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
+
+# Clean rule
+clean:
+	rm -f &(OBJ) $(NAME)
