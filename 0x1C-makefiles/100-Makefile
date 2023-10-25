@@ -4,18 +4,18 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
-CFLAGS = -Wall -Werror -Wextra -pedantic
+AFLAGS = -Wall -Werror -Wextra -pedantic
 
 # Default Target
 all: $(NAME)
 
 # Rule to build the executable
 $(NAME): $(OBJ)
-	$(CC) -o $@ $(OBJ) $(CFLAGS)
+	$(CC) -o $@ $(OBJ) $(AFLAGS)
 
 # Rule to build .o files from .c files
 .c.o:
-	$(CC) -c $< -o $@ $(CFLAGS)
+	$(CC) -c $< -o $@ $(AFLAGS)
 
 # Clean rule
 clean:
