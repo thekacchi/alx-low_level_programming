@@ -19,7 +19,7 @@ clean:
 
 # Object files clean rule
 oclean:
-	$(BM) $(OBJ)
+	$(RM) $(OBJ)
 
 # Full clean rule
 fclean: clean oclean
