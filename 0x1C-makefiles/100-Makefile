@@ -15,7 +15,7 @@ all: m.h $(OBJ)
 
 # Clean rule
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) *~ $(OBJ)
 
 # Object files clean rule
 oclean:
