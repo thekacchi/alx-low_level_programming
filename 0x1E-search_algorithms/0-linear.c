@@ -3,9 +3,10 @@
 
 /**
  * linear_search - uses linear search algorithm
- * array: parameter of func
- * value: parameter of func
- * return: always 0 on success
+ * @array: parameter of func
+ * @value: parameter of func
+ * @size: function parameter
+ * Return: always 0 on success
  */
 int linear_search(int *array, size_t size, int value)
 {
