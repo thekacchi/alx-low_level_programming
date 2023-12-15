@@ -53,7 +53,7 @@ int binary_search2(int *array, size_t left, size_t right, int value)
 }
 
 /**
- * exponential_search - Searches for a value in a sorted array using Exponential
+ * exponential_search - Searches for a value in sorted array usingExponential
  * @array: Pointer to the first element of the array to search in
  * @size: Number of elements in the array
  * @value: Value to search for
