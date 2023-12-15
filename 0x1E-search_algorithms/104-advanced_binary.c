@@ -28,21 +28,31 @@ int advanced_binary(int *array, size_t size, int value)
  */
 int advanced_binary_recursive(int *array, size_t start, size_t end, int value)
 {
-	size_t i;
+	size_t i, mid;
 
 	if (start > end)
 		return (-1);
 	
-	printf("Searching in array: %d", array[start]);
+	mid = (start + end) / 2;
+	
+	printf("Searching in array: ");
 	for (i = start + 1; i <= end; i++)
-		printf(", %d", array[i]);
+	{
+		printf("%d", array[i]);
+		if (i < end)
+			printf(", ");
+	}
 	printf("\n");
 
-	i = (start + end) / 2;
-	if (array[i] == value)
-		return (i);
-	
-	if (array[i] > value)
-		return (advanced_binary_recursive(array, i + 1, end, value));
-	return advanced_binary_recursive(array, i + 1, end, value);
-}	
+	if (array[mid] == value)
+	{
+		if (mid == start || array[mid - 1] != value)
+			return (mid);
+		else
+			return (advanced_binary_recursive(array, start, mid - 1, value));
+	}
+	else if (array[mid] < value)
+		return (advanced_binary_recursive(array, mid + 1, end, value));
+	else
+		return (advanced_binary_recursive(array, start, mid - 1, value));
+}
